@@ -1,7 +1,11 @@
 import AnimatedCodeSVG from '../components/AnimatedIcons/AnimatedCodeSVG'
 import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react'
+import { useSelector } from 'react-redux'
+
 
 export default function Hero({ mousePosition, currentTheme }) {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode)
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative">
       <div className="text-center z-10 px-4">
@@ -11,7 +15,7 @@ export default function Hero({ mousePosition, currentTheme }) {
             Frontend Developer
           </span>
         </h1>
-        <p className={`text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto`}>
+        <p className={`text-xl md:text-2xl ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-8 max-w-3xl mx-auto`}>
           Crafting exceptional digital experiences with modern web technologies
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">

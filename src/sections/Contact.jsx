@@ -9,7 +9,7 @@ export default function Contact() {
         <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
           Let's Work Together
         </h2>
-        <p className="text-xl text-gray-300 mb-12">
+        <p className={`text-xl ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-12`}>
           Ready to bring your ideas to life? Let's discuss your next project.
         </p>
         <div className="grid md:grid-cols-3 gap-8 mb-12">
